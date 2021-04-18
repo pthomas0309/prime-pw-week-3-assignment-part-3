@@ -12,7 +12,7 @@ let supplyChanges = [ '3', '5', '-6', '0', '7', '11' ]
 console.log('2. Array of supplyChanges:', supplyChanges);
 
 // 3. Console log the value of 'supplyChanges' at index 2
-console.log('3. Item at index 2 is:', supplyChanges[ 2 ]);
+console.log('3. Item at index 2 is:', supplyChanges[ 2 ]); // log '-6'
 
 // 4. The last item was added by mistake. Remove it from the 'supplyChanges'
 //    array & console.log the value removed.
@@ -32,9 +32,11 @@ for( let i = 0; i<supplyChanges.length; i++ ){
   if( supplyChanges[ i ] > '0' ){
     console.log( 'Added', supplyChanges[ i ] );
   } // end if
-  if ( supplyChanges[ i ] < '0' ){
+  else if ( supplyChanges[ i ] < '0' ){
     console.log( 'Part count', supplyChanges[ i ] );
-  } // end if
+  } // end elseif
+  else {
+  } // end else
 }
 
 
@@ -46,9 +48,11 @@ for( partRequests of supplyChanges ){
   if( partRequests > '0' ){
     console.log( 'Added', partRequests );
   } // end if
-  if ( partRequests < '0' ){
+  else if ( partRequests < '0' ){
     console.log( 'Part count', partRequests );
-  } // end if
+  } // end else if
+  else{
+  } // end else
 }
 
 // 8. Rewrite the `for` loop from #6 as a `while` loop.
